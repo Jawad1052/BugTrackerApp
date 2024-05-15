@@ -1,0 +1,474 @@
+/* Style for the welcome message */
+.user-welcome {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.sign-modules {
+    display: flex;
+    flex-direction: column;
+
+    /*justify-content: center;*/
+}
+/* Style for the sign-out button */
+.sign-out-btn {
+    margin-top: 50px;
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.sign-up-btn {
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the sign-in button */
+.sign-in-btn {
+    background-color: #00f;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the app title */
+.app-title {
+    text-align: center;
+    background-color: mediumpurple;
+    font-size: 32px;
+    color: #333;
+    margin-top: 20px;
+}
+/* app/assets/stylesheets/application.css */
+.bug-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.actions {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* app/assets/stylesheets/bugs.css */
+
+.bug-table-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bug-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.bug-table th, .bug-table td {
+    padding: 8px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.bug-table th {
+    background-color: #f2f2f2;
+}
+
+.bug-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bug-table tbody tr:hover {
+    background-color: #eaf5ff;
+}
+
+/* Style for New Bug link */
+.new-bug-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.new-bug-link a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.new-bug-link a:hover {
+    background-color: #0056b3;
+}
+/* app/assets/stylesheets/bugs.css */
+
+.card {
+padding: 30px;
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.bug-details p {
+    margin-bottom: 10px;
+}
+
+.middle{
+    width: 260px;
+    margin-top: 25px;
+    margin-left: 520px;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+.btn-status{
+    margin-top: 12px;
+    background-color: lightsalmon;
+    color: #2E2F30;
+}
+.btn-tri {
+    background-color: cadetblue;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* app/assets/stylesheets/application.css */
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment strong {
+    color: #333;
+}
+
+
+.app-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.user-welcome {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.buttons, .sign-modules {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sign-in-btn, .sign-up-btn, .sign-out-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign-in-btn {
+    background-color: #007bff;
+}
+
+.sign-up-btn {
+    background-color: #28a745;
+}
+
+.sign-out-btn {
+    background-color: #dc3545;
+}
+
+.sign-in-btn:hover, .sign-up-btn:hover, .sign-out-btn:hover {
+    opacity: 0.8;
+}
+.columns-container{
+    display: flex;
+}
+.column-title{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    background-color: mediumpurple;
+    padding-left: 40%;
+    height: 40px;
+    padding-top: 16px;
+    color: #ffeaea;
+
+}
+.bug-cards-column{
+    flex: 1;
+    margin-right: 20px;
+}
+.bug-cards-container {
+    display: flex;
+    flex-direction: column;
+}
+.bug-card-link{
+    text-decoration: none;
+    color: inherit;
+}
+.bug-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0; /* Adjust margin between cards */
+    padding: 10px;
+    /*width: calc(100% - 80%); !* Adjust width based on your design *!*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bug-details {
+    margin-bottom: 10px;
+}
+
+.bug-details p {
+    margin: 5px 0;
+}
+
+.bug-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.btn-delete {
+    background-color: red;
+}
+.bug-actions .btn {
+    margin-left: 10px;
+}
+.user-sign-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28a745;
+}
+.admin-sign-btn {
+    background-color: dodgerblue;
+}
+.manager-sign-btn {
+    background-color: darkgoldenrod;
+}
+
+/*New Card CSS*/
+
+.card-content {
+    margin: 2px;
+    padding: 16px;
+    border-bottom: 2px solid gainsboro;
+    background-color: #ecf3ff;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+}
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+}
+.status-dropdown {
+    margin: 8px 0;
+}
+
+.status-select {
+    font-weight: bold;
+    height: 30px;
+    width: 160px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #009dff;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for status */
+    border: none; /* Remove default border */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14L2.451 6.345a.5.5 0 0 1 .708-.708L8 10.293l4.841-4.841a.5.5 0 0 1 .708.708L8.753 11.14a.5.5 0 0 1-.706 0z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 16px 16px;
+    /*padding-right: 32px; !* Space for custom arrow *!*/
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.25); /* Shadow on focus */
+}
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+}
+
+/* CSS for the icon */
+.icon-button i {
+    padding: 10px;
+    font-size: 30px; /* Adjust the size of the icon */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+
+}
+.delete-bug-button{
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 30px; /* Adjust the size of the icon */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+.assign-initial {
+margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.71); /* Background color for the initial */
+    color: #fff; /* Text color */
+    border-radius: 50%; /* Make it a circle */
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*opacity: 0; !* Initially hidden *!*/
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.assign-initial:hover {
+    box-shadow: 0 0 10px 5px rgba(173, 216, 230, 1);
+}
+
+/* Hover effect for the icon */
+.icon-button:hover i {
+    transform: scale(1.2); /* Increase the size of the icon on hover */
+    color: #007bff; /* Change the color on hover */
+}
+.delete-bug-button[title="Delete Bug"] i {
+    color: #dc3545; /* Delete icon color */
+    background-color: transparent;
+}
+.card-footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-footer .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer .btn.middle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.card-footer .btn.middle:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.card-footer .sign-out-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.card-footer .sign-out-btn:hover {
+    background-color: #c82333;
+    color: white;
+}
+/* app/assets/stylesheets/application.css */
+.flash {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.flash.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash.notice {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
