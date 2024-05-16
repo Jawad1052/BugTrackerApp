@@ -1,6 +1,6 @@
 class BugsController < ApplicationController
   load_and_authorize_resource
-   #before_action :authenticate_user!
+   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
   def index
@@ -58,18 +58,25 @@ class BugsController < ApplicationController
   end
 
   def assign_bug
-    @bug = Bug.find(params[:id])
-    bug_user_id = params[:bug][:user_id].to_i
-    if current_user.role.name == 'manager'
-      @bug.update(user_id: bug_user_id)
-      redirect_to bugs_path
-    elsif current_user.id == bug_user_id
-      @bug.update(user_id: current_user.id)
-      redirect_to bugs_path
-    else
-      redirect_to @bug, alert: "You can only assign bug to yourself."
-    end
+      service = BugAssignmentService.new(current_user, params)
+      if service.assign_bug
+        redirect_to bugs_path
+      else
+        redirect_to @bug, alert: "You can only assign the bug to yourself."
+      end
+    # @bug = Bug.find(params[:id])
+    # bug_user_id = params[:bug][:user_id].to_i
+    # if current_user.role.name == 'manager'
+    #   @bug.update(user_id: bug_user_id)
+    #   redirect_to bugs_path
+    # elsif current_user.id == bug_user_id
+    #   @bug.update(user_id: current_user.id)
+    #   redirect_to bugs_path
+    # else
+    #   redirect_to @bug, alert: "You can only assign bug to yourself."
+    # end
   end
+
   private
 
   def bug_params
