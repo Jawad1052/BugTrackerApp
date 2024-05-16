@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <h1 class="app-title">BugTrackPro</h1>
+
+    <% if user_signed_in?%>
+      <div class="user-welcome"> Welcome <%= current_user.email.split('@').first.capitalize %> </div>
+        <% role_name = Role.find(current_user.role_id)&.name.capitalize %>
+        <div class="user-welcome"> Your role is <%= role_name %></div>
+
+      <div class="buttons">
+        <%= link_to "Display Bugs", bugs_path, class: "sign-in-btn" %>
+        <%= link_to "Report Bug", new_bug_path, class: "sign-in-btn" %>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "sign-out-btn" %>
+      </div>
+    <% else %>
+      <div class="sign-modules">
+
+        <%= link_to "User Sign In", new_user_session_path, class: "user-sign-btn" %>
+        <%= link_to "User Sign Up", new_user_registration_path, class: "user-sign-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

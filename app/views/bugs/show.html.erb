@@ -1,0 +1,39 @@
+<!-- app/views/bugs/show.html.erb -->
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Details of Bug</h5>
+
+    <div class="bug-details">
+      <p><strong>Title:</strong> <%= @bug.title%></p>
+      <p><strong>Description:</strong> <%= @bug.description %></p>
+      <p><strong>Status:</strong> <%= @bug.priority %></p>
+    </div>
+
+    <!-- Comments Section -->
+    <h5 class="card-title">Comments</h5>
+    <% @bug.comments.each do |comment| %>
+      <div class="comment">
+        <p><strong><%= comment.user.email.split('@').first.capitalize%>:</strong> <%= comment.content %></p>
+      </div>
+    <% end %>
+
+    <!-- Add Comment Section -->
+    <% if current_user %>
+      <%= form_with(model: [@bug,@bug.comments.build], local: true) do |form| %>
+        <div class="form-group">
+          <%= form.label :content, "Add a comment:" %>
+          <%= form.text_area :content, class: "form-control", rows: 3 %>
+        </div>
+        <%= form.submit "Add Comment", class: "btn btn-primary" %>
+      <% end %>
+    <% else %>
+      <p>Please log in to add a comment.</p>
+    <% end %>
+  </div>
+
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_bug_path(@bug), class: "btn btn-primary" %> |
+    <%= link_to 'Back', bugs_path, class: "btn btn-secondary" %>
+  </div>
+</div>

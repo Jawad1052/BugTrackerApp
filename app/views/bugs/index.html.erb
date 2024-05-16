@@ -1,0 +1,160 @@
+
+<div class="columns-container">
+  <% ['To Do', 'In Progress', 'Review', 'QA', 'Deployed'].each do |status| %>
+    <div class="bug-cards-column">
+      <h2 class="column-title"><%= status %></h2>
+        <% @bugs.filter { |bug| bug.status == status }.each do |bug| %>
+          <div class="card-content">
+            <div class="assign-initial"></div>
+            <h2 class="card-title"> <%= bug.title %></h2>
+            <p class="card-description"><%= bug.description %></p>
+            <div class="status-dropdown">
+              <%= form_for bug, url: bug_path(bug), method: :patch, html: { id: "update-status-form-#{bug.id}" } do |f| %>
+                <%= f.select :status, options_for_select(['To Do', 'In Progress', 'Review', 'QA', 'Deployed'], bug.status), {}, class: 'form-control status-select', id: "status-select-#{bug.id}" %>
+                <%= f.submit 'Update Status', class: 'btn btn-status', style: 'display: none;' %>
+              <% end %>
+            </div>
+            <div class="card-actions">
+              <div class="icon-button" style="background-color: <%= priority_color(bug.priority)[:color] %>">
+                <i class="fa <%= priority_color(bug.priority)[:icon] %>"></i>
+              </div>
+              <%= link_to bug_path(bug), class: "icon-button" do %>
+                <i class="fa fa-comments-o" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to edit_bug_path(bug), class: "icon-button" do %>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <% end %>
+              <%= form_for bug, url: assign_bug_bug_path(bug), method: :patch, html: { id: "assign-bug-form-#{bug.id}" } do |f| %>
+                <div class="form-group">
+                  <%= select_tag 'bug[user_id]',
+                                 options_for_select([['None', nil]] + User.all.map{ |u| [u.email.split('@').first.capitalize, u.id] }, bug.user_id),
+                                 {class: 'form-control', onchange: "$('#assign-bug-form-#{bug.id}').submit();"} %>
+
+                  <%#= f.select :user_id, options_for_select(User.all.map{ |u| [u.email.split('@').first.capitalize, u.id] }, bug.user_id), {include_blank: 'None' }, class: 'form-control', onchange: "$('#assign-bug-form-#{bug.id}').submit();" %>
+                  <%#= select_tag 'bug[user_id]', options_for_select(User.all.map{ |u| [u.email.split('@').first.capitalize, u.id] }, bug.user_id), {class: 'form-control', onchange: "$('#assign-bug-form-#{bug.id}').submit();"} %>
+                    <%#= , options_for_select(User.all.collect { |u| [u.name, u.id] }, bug.user_id), { class: "form-control", onchange: "$('#assign-bug-form-#{bug.id}').submit();" } %>
+
+                </div>
+                <%= f.submit 'Assign Bug', class: 'btn btn-status', style: 'display: none;' %>
+              <% end %>
+              </p>
+              <% if current_user.role.name == 'admin' %>
+                <%= button_to bug_path(bug), method: :delete, remote: true, data: { confirm: 'Are you sure you want to delete this bug?',bug_id: bug.id },title: "Delete Bug", class: "delete-bug-button" do %>
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+
+        <% end %>
+      </div>
+  <% end %>
+</div>
+
+
+<div class="card-footer">
+  <%= link_to 'Report New Bug', new_bug_path, class: "btn middle" %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn sign-out-btn" %>
+</div>
+
+
+<!--Script for ASSIGNMENT -->
+<script>
+    $(document).ready(function() {
+        console.log("In Function")
+
+        $('[id^=assign-to-select]').on('change', function() {
+            var formId = $(this).attr('id').replace('assign-to-select', 'assign-bug-form');
+            $('#' + formId).submit();
+        });
+    });
+
+</script>
+<!--Script for UPDATE Status-->
+<script>
+    $(document).ready(function() {
+        console.log("In Function")
+
+        $('[id^=status-select]').on('change', function() {
+            console.log("Changing Value")
+
+            var formId = $(this).attr('id').replace('status-select', 'update-status-form');
+            console.log(formId)
+            event.preventDefault()
+            $('#' + formId).submit();
+            console.log("Change Submitted")
+        });
+    });
+
+</script>
+<!--Script for DELETE-->
+<script>
+    $(document).ready(function() {
+        $('.delete-bug-button').on('click', function(event) {
+            event.preventDefault();
+            console.log("DEfault Status")
+            var $button = $(this); // Cache the button element
+            var bugId = $button.data('bug-id');
+
+            // Confirm deletion before proceeding
+            if (confirm('Are you sure you want to delete this bug?')) {
+                $.ajax({
+                    url: '/bugs/' + bugId + '/delete_bug',
+                    method: 'DELETE',
+                    success: function(response) {
+                        console.log("Ajax success");
+                        console.log(response);
+                        window.location.reload();
+                        alert(response.message);
+
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Ajax error");
+                        alert(response.message);
+                    }
+                });
+            } else {
+                console.log("Deletion cancelled");
+            }
+        });
+    });
+</script>
+
+<script>
+
+
+    $(document).ready(function() {
+        function updateAssignInitial() {
+            $('.card-content').each(function() {
+                var $card = $(this);
+                var assignedUser = $card.find('select[name="bug[user_id]"] option:selected').text();
+
+                if (assignedUser === 'None') {
+                    $card.find('.assign-initial').text('?');
+                } else {
+                    var initial = assignedUser.trim().charAt(0).toUpperCase();
+                    $card.find('.assign-initial').text(initial);
+                }
+            });
+        }
+
+        // Initial update on page load
+        updateAssignInitial();
+
+        // Update on change of assignment
+        $('select[name="bug[user_id]"]').on('change', function() {
+            var $card = $(this).closest('.card-content');
+            var assignedUser = $(this).find('option:selected').text();
+
+            if (assignedUser === 'None') {
+                $card.find('.assign-initial').text('?');
+            } else {
+                var initial = assignedUser.trim().charAt(0).toUpperCase();
+                $card.find('.assign-initial').text(initial);
+            }
+        });
+    });
+
+</script>
+
+
