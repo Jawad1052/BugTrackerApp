@@ -311,10 +311,15 @@ padding: 30px;
 /*New Card CSS*/
 
 .card-content {
+
     margin: 2px;
     padding: 16px;
     border-bottom: 2px solid gainsboro;
     background-color: #ecf3ff;
+}
+.card-content a{
+    text-decoration: none;
+    cursor: pointer;
 }
 .card-title {
     font-size: 18px;
@@ -472,3 +477,48 @@ margin-left: auto;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
+/* Style for Bug Details */
+.bug-details {
+    margin-bottom: 20px;
+}
+
+.bug-details p {
+    margin-bottom: 10px;
+}
+
+.bug-details p strong {
+    font-weight: bold;
+}
+
+/* Style for Comments Section */
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin-bottom: 5px;
+}
+
+.comment p strong {
+    font-weight: bold;
+}
+
+/* Style for Add Comment Section */
+.add-comment-form {
+    margin-top: 20px;
+}
+
+.add-comment-form label {
+    font-weight: bold;
+}
+
+.add-comment-form textarea {
+    resize: vertical;
+}
+
+.add-comment-form .btn-primary {
+    margin-top: 10px;
+}
+

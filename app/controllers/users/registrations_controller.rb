@@ -12,8 +12,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
    def create
     super do |resource|
-         resource.role_id = params[:user][:role] # Set the role_id based on the selected role
-         resource.save
+      resource.role_id = Role.find_by(name: 'developer')&.id || 4 # Set the role to 'developer'
+      resource.save
        end
    end
 

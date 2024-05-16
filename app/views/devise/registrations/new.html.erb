@@ -22,10 +22,10 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
-      <div class="field">
-        <%= f.label :role %><br />
-        <%= f.select :role, options_for_select([['Admin', 2], ['Manager', 3], ['Developer', 4]], @user.role.id), { include_blank: 'Select role' }, class: 'form-control' %>
-      </div>
+<!--      <div class="field">-->
+<!--        <%#= f.label :role %><br />-->
+        <%#= f.select :role, options_for_select([['Admin', 2], ['Manager', 3], ['Developer', 4]], @user.role.id), { include_blank: 'Select role' }, class: 'form-control' %>
+<!--      </div>-->
 
 
 

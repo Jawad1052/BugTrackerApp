@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f037b83a-2563-44d8-88a2-0b2604143202" name="Changes" comment="Commit" />
+    <list default="true" id="f037b83a-2563-44d8-88a2-0b2604143202" name="Changes" comment="Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/ideas.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/ideas.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/bugs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bugs/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ET/ETgtHLSv_wlSrFAitjBCVswZtj71oVXorTNfIQp5g9M.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ET/ETgtHLSv_wlSrFAitjBCVswZtj71oVXorTNfIQp5g9M.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/WG/WGJ5N23qQqbAoZpJNWEwFx1L8lTrThCfwySt_K4bvFM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/WG/WGJ5N23qQqbAoZpJNWEwFx1L8lTrThCfwySt_K4bvFM.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Wr/WrXmEGADqs7ciOCVfIFERP3wSg3tz_6YJhcPC8t7Lsw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Wr/WrXmEGADqs7ciOCVfIFERP3wSg3tz_6YJhcPC8t7Lsw.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/g5/g50QTnyvPiDflrepuJhwhvm0OBp-v5snG9GZK_j0a7s.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/g5/g50QTnyvPiDflrepuJhwhvm0OBp-v5snG9GZK_j0a7s.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/gi/giMmu6htVkCKxWXXg1_SGFocWCS7EmpJ0VHQClqtnf0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/gi/giMmu6htVkCKxWXXg1_SGFocWCS7EmpJ0VHQClqtnf0.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/h9/h9ZaYra98wdryNzP1cAtRCKUSztuK-nCLkZg4Et2Vhg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/h9/h9ZaYra98wdryNzP1cAtRCKUSztuK-nCLkZg4Et2Vhg.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/70/64bff492b9f014" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/70/64bff492b9f014" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/98/e9c69e024b2014" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/98/e9c69e024b2014" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/a4/af59843848f30d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/a4/af59843848f30d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/bd/4e22af7b274968" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/bd/4e22af7b274968" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/bd/d0fd95ff0d79f0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/bd/d0fd95ff0d79f0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/f6/742379367e8f21" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/f6/742379367e8f21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/f7/5a8c2b668efc38" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache-iseq/f7/5a8c2b668efc38" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_views_127.0.0.1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/miniprofiler/mp_views_127.0.0.1" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +67,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/Jawad1052/TestProject.git",
+    "url": "https://github.com/Jawad1052/BugTrackerApp.git",
     "accountId": "fc2234e3-7a43-4552-8548-3ddd5e72c209"
   }
 }]]></component>
@@ -204,7 +230,7 @@
       <workItem from="1715677002188" duration="14376000" />
       <workItem from="1715757475488" duration="11490000" />
       <workItem from="1715770296068" duration="10603000" />
-      <workItem from="1715843923004" duration="323000" />
+      <workItem from="1715843923004" duration="8702000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />

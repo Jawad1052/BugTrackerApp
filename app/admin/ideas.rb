@@ -1,5 +1,5 @@
 ActiveAdmin.register Bug do
-  permit_params :title, :description, :priority
+  permit_params :title, :description, :priority, :status
 
   index do
     selectable_column
@@ -9,8 +9,6 @@ ActiveAdmin.register Bug do
     column :priority
     column :status
     actions # Add default actions (view, edit, delete)
-
-
   end
 
   # Customize the filters for the index view
@@ -24,6 +22,7 @@ ActiveAdmin.register Bug do
       f.input :title
       f.input :description
       f.input :priority
+      f.input :status
     end
     f.actions
   end

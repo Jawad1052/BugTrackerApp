@@ -4,7 +4,7 @@
 # Examples:
 ## db/seeds.rb
 # db/seeds.rb
-Role.create(name: 'developer', actual_name: 'Develper')               # ID: 1
+Role.create(name: 'developer', actual_name: 'Developer')               # ID: 1
 Role.create(name: 'admin', actual_name: 'Administrator')    # ID: 2
 Role.create(name: 'manager', actual_name: 'Manager')         # ID: 3
 
